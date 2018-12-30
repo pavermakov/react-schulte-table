@@ -1,6 +1,7 @@
 import React, { Component, Fragment } from 'react';
 import { Container, GlobalStyles } from './App.primitives';
 import Menu from '../../features/menu/Menu';
+import Gameplay from "../../features/gameplay/Gameplay";
 
 const SCREENS = {
   MENU: 0,
@@ -10,7 +11,7 @@ const SCREENS = {
 
 class App extends Component {
   state = {
-    screen: SCREENS.MENU
+    screen: SCREENS.GAMEPLAY
   };
 
   setScreen = (screen) => {
@@ -24,6 +25,7 @@ class App extends Component {
 
         <Container>
           {this.state.screen === 0 && <Menu onScreenChange={this.setScreen} />}
+          {this.state.screen === 1 && <Gameplay onScreenChange={this.setScreen} />}
         </Container>
       </Fragment>
     );
