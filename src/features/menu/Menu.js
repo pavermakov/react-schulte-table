@@ -2,8 +2,8 @@ import React, { Component } from 'react';
 import { MenuContainer, MenuTitle, MenuInstructions, MenuButton } from './Menu.primitives';
 
 class Menu extends Component {
-  startGame() {
-
+  startGame = () => {
+    this.props.onScreenChange(1);
   }
 
   render() {
@@ -17,7 +17,7 @@ class Menu extends Component {
 
         <MenuButton
           label={"start"}
-          onPress={this.startGame}
+          onClick={this.startGame}
         />
       </MenuContainer>
     );
