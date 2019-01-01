@@ -16,9 +16,6 @@ export const GridCell = styled.button`
   flex-direction: row;
   justify-content: center;
   align-items: center;
-  /* padding: 20px; */
-  min-width: 59px;
-  min-height: 59px;
   background-color: ${colors.isabelline};
   box-sizing: border-box;
   color: ${colors.gunmetal};

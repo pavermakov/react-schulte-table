@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
-import { MenuContainer, MenuTitle, MenuInstructions, MenuButton } from './Menu.primitives';
+import { MenuContainer, MenuInstructions, MenuButton } from './Menu.primitives';
+import { Title } from '../../components/App/App.primitives';
 
 class Menu extends Component {
   startGame = () => {
@@ -9,7 +10,7 @@ class Menu extends Component {
   render() {
     return (
       <MenuContainer>
-        <MenuTitle>Schulte Table</MenuTitle>
+        <Title>Schulte Table</Title>
 
         <MenuInstructions>
           Focus on the grid centre and find all the numbers (letters) with your peripheral vision, i.e. without moving your eyes

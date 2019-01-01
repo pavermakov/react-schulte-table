@@ -52,9 +52,8 @@ class Gameplay extends Component {
     this.setState({
       numbers: this.getShuffledNumbers(),
       nextNumber: 1,
+      timerKey: Date.now()
     });
-
-    this.setState({ timerKey: Date.now() })
   };
 
   render() {
