@@ -8,6 +8,8 @@ const ButtonWrapper = styled.button`
   background-color: ${colors.gunmetal};
   color: ${colors.isabelline};
   border-radius: 9999px;
+  cursor: pointer;
+  outline-color: ${colors.green};
 `;
 
 class Button extends Component {

@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import { colors } from '../../config';
+import { colors } from '../../../config';
 
 export const GridWrapper = styled.div`
   display: grid;
@@ -8,6 +8,7 @@ export const GridWrapper = styled.div`
   border: 4px solid ${colors.gunmetal};
   grid-gap: 1px;
   background-color: ${colors.gunmetal};
+  box-sizing: border-box;
 `;
 
 export const GridCell = styled.button`
@@ -15,12 +16,14 @@ export const GridCell = styled.button`
   flex-direction: row;
   justify-content: center;
   align-items: center;
-  padding: 20px;
+  /* padding: 20px; */
+  min-width: 59px;
+  min-height: 59px;
   background-color: ${colors.isabelline};
   box-sizing: border-box;
   color: ${colors.gunmetal};
   font-weight: bold;
-  font-size: 20px;
+  font-size: ${props => props.fontSize}px;
   outline: none;
   cursor: pointer;
   border: none;

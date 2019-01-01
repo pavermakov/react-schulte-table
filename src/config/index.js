@@ -6,6 +6,11 @@ const colors = {
 
 const constants = {
   gridSize: 25,
+  screens: {
+    menu: 0,
+    gameplay: 1,
+    results: 2,
+  },
 };
 
 const utils = {
