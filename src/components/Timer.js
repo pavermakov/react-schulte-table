@@ -1,8 +1,6 @@
 import React, { Component } from 'react';
 import styled from 'styled-components';
-
-const SECOND = 1000;
-const MINUTE = SECOND * 60;
+import { constants, utils } from '../config';
 
 const TimerWrapper = styled.div`
   font-size: 28px;
@@ -16,14 +14,6 @@ class Timer extends Component {
   };
 
   interval = null;
-
-  get formattedTime() {
-    const { ms } = this.state;
-    const minutes = Math.floor(ms / MINUTE);
-    const seconds = ms % MINUTE / SECOND;
-
-    return `${this.getDigit(minutes)} : ${this.getDigit(seconds)}`;
-  }
 
   componentDidMount() {
     if (this.props.staticValue !== undefined) {
@@ -45,7 +35,7 @@ class Timer extends Component {
 
   start = () => {
     this.stop();
-    this.interval = setInterval(this.tick, SECOND);
+    this.interval = setInterval(this.tick, constants.second);
   };
 
   stop = () => {
@@ -54,7 +44,7 @@ class Timer extends Component {
   };
 
   tick = () => {
-    const nextValue = this.state.ms + SECOND;
+    const nextValue = this.state.ms + constants.second;
 
     this.setState({ ms: nextValue });
     this.props.onTick(nextValue);
@@ -67,7 +57,7 @@ class Timer extends Component {
   render() {
     return (
       <TimerWrapper>
-        {this.formattedTime}
+        {utils.formatTime(this.state.ms)}
       </TimerWrapper>
     );
   }

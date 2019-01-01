@@ -1,5 +1,6 @@
 import styled from 'styled-components';
 import Grid from './Grid/Grid';
+import { constants } from '../../config';
 
 export const GameplayContainer = styled.div`
   display: flex;
@@ -17,6 +18,10 @@ export const GameplayBody = styled.div`
     content: "";
     display: block;
     padding-top: 100%;
+  }
+
+  @media (max-width: ${constants.mediaQueries.medium}px) {
+    width: 100%;
   }
 `;
 
@@ -45,4 +50,9 @@ export const GameplayToolbar = styled.div`
   align-items: center;
   width: 50%;
   margin-top: 10px;
+
+  @media (max-width: ${constants.mediaQueries.medium}px) {
+    width: 100%;
+    flex-direction: column;
+  }
 `;

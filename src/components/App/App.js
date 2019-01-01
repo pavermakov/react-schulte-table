@@ -2,6 +2,7 @@ import React, { Component, Fragment } from 'react';
 import { Container, GlobalStyles } from './App.primitives';
 import Menu from '../../features/menu/Menu';
 import Gameplay from '../../features/gameplay/Gameplay';
+import Results from '../../features/results/Results';
 import { constants } from '../../config';
 
 class App extends Component {
@@ -26,6 +27,7 @@ class App extends Component {
         <Container>
           {this.state.screen === 0 && <Menu onScreenChange={this.setScreen} />}
           {this.state.screen === 1 && <Gameplay onTick={this.setElapsedTime} onScreenChange={this.setScreen} />}
+          {this.state.screen === 2 && <Results time={this.state.elapsedTime} onScreenChange={this.setScreen} />}
         </Container>
       </Fragment>
     );

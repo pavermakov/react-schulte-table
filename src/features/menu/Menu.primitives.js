@@ -21,13 +21,6 @@ export const MenuContainer = styled.div`
   }
 `;
 
-export const MenuTitle = styled.h1`
-  text-align: center;
-  font-size: 100px;
-  font-weight: bold;
-  color: ${colors.gunmetal};
-`;
-
 export const MenuInstructions = styled.p`
   padding: 0 20px;
   font-size: 28px;

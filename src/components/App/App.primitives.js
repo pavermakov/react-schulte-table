@@ -1,4 +1,5 @@
 import styled, { createGlobalStyle } from 'styled-components';
+import { colors } from '../../config';
 import 'normalize.css';
 import pattern from '../../assets/leaves-pattern.png';
 
@@ -31,4 +32,11 @@ export const Container = styled.main`
   box-sizing: border-box;
   padding: 10px;
   height: 100vh;
+`;
+
+export const Title = styled.h1`
+  text-align: center;
+  font-size: 100px;
+  font-weight: bold;
+  color: ${colors.gunmetal};
 `;
